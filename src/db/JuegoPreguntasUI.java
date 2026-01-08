@@ -68,7 +68,31 @@ public class JuegoPreguntasUI extends JFrame {
     }
 
     private void guardarPregunta() {
-    }   
+
+        String pregunta = txtPregunta.getText();
+        String respuesta = txtRespuesta.getText();
+
+        if (pregunta.isEmpty() || respuesta.isEmpty()) {
+            JOptionPane.showMessageDialog(this,
+                    "Debe completar ambos campos",
+                            "Validacion",
+                            JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        
+        // guardar en oracle . 
+        guardarEnBaseDatos(pregunta, respuesta);
+        
+        JOptionPane.showMessageDialog(this,
+                "Pregunta guardada correctamente");
+        
+        txtPregunta.setText("");
+        txtRespuesta.setText("");
+    }
+
+    private void guardarEnBaseDatos(String pregunta, String respuesta) {
+
+    }
 
     public static void main(String[] args) {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
