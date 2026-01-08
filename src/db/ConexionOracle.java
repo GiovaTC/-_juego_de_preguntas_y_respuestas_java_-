@@ -10,7 +10,7 @@ public class ConexionOracle {
     private static final String USER = "system";
     private static final String PASSWORD = "Tapiero123";
 
-    public static Connection getConnection() throws Exception {
+    public static Connection getConexion() throws Exception {
         Class.forName("oracle.jdbc.driver.OracleDriver");
         return DriverManager.getConnection(URL, USER, PASSWORD);
     }
