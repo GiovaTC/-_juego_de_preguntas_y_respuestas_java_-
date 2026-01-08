@@ -6,6 +6,8 @@
 
 <img width="2553" height="1077" alt="image" src="https://github.com/user-attachments/assets/9023723b-6017-4d0a-970b-fc1423570241" />    
 
+<img width="2553" height="1079" alt="image" src="https://github.com/user-attachments/assets/5fde3ced-2785-4b3b-89fe-9b0601c88990" />    
+
 A continuación se presenta una **solución completa, profesional y ejecutable en Java (IntelliJ IDEA)** que cumple exactamente con lo solicitado:
 
 - Juego de Preguntas y Respuestas  
