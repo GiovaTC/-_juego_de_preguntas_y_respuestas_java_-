@@ -34,7 +34,41 @@ public class JuegoPreguntasUI extends JFrame {
         initComponents();
     }
 
-    private void initComponents() {}    
+    private void initComponents() {
+
+        JLabel lblTitulo = new JLabel("Registro de Preguntas", JLabel.CENTER);
+        lblTitulo.setFont(new Font("Arial", Font.BOLD, 18));
+
+        JLabel lblPregunta = new JLabel("Pregunta:");
+        JLabel lblRespuesta = new JLabel("Respuesta:");
+
+        txtPregunta = new JTextField();
+        txtRespuesta = new JTextField();
+
+        btnGuardar = new JButton("Guardar");
+        btnSalir = new JButton("Salir");
+
+        btnGuardar.addActionListener(e -> guardarPregunta());
+        btnSalir.addActionListener(e -> System.exit(0));
+
+        JPanel panelCentro = new JPanel(new GridLayout(4, 1, 10, 10));
+        panelCentro.add(lblPregunta);
+        panelCentro.add(txtPregunta);
+        panelCentro.add(lblRespuesta);
+        panelCentro.add(txtRespuesta);
+
+        JPanel panelBotones = new JPanel();
+        panelBotones.add(btnGuardar);
+        panelBotones.add(btnSalir);
+
+        setLayout(new BorderLayout(10, 10));
+        add(lblTitulo, BorderLayout.NORTH);
+        add(panelCentro, BorderLayout.CENTER);
+        add(panelBotones, BorderLayout.SOUTH);
+    }
+
+    private void guardarPregunta() {
+    }   
 
     public static void main(String[] args) {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
